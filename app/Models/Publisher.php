@@ -12,4 +12,8 @@ class Publisher extends Model
     protected $table = 'Publishers';
 
     public $fillable = ['name'];
+
+    public function books(){
+        return $this->hasMany(Book::class);
+    }
 }

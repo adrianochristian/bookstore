@@ -13,4 +13,11 @@ class Book extends Model
 
     public $fillable = ['title','pages','publication_date','publisher_id'];
     
+    public function publisher(){
+        return $this->belongsTo(Publisher::class);
+    }
+
+    public function author(){
+        return $this->belongsTo(Author::class);
+    }
 }
